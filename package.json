@@ -19,7 +19,7 @@
   "author": "Tess Myers",
   "bin": {
     "testRun": "./testRun.js"
-  }
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TessMyers/karma-easter-eggs/issues"
