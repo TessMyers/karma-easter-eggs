@@ -1,7 +1,7 @@
 {
   "name": "karma-easter-eggs",
-  "version": "1.0.1",
-  "description": "A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.",
+  "version": "1.0.2",
+  "description": "A karma reporter for fun easter eggs. Currently is a rough copy of karma-unicorn-reporter, but opens a chrome tab for Reddit",
   "main": "eggs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
   ],
   "author": "Tess Myers",
   "bin": {
-    "testRun": "./testRun.js"
+    "runFile": "./fileToRun.sh"
   },
   "license": "ISC",
   "bugs": {

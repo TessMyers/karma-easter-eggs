@@ -5,7 +5,13 @@ var easterEggReporter = function(baseReporterDecorator) {
     var results = browser.lastResult;
 
     if(results.success) {
-      require('child_process').exec("./node_modules/.bin/testRun");
+      require('child_process').exec("./node_modules/.bin/runFile", function(err, stdout){
+          if (err) {
+            console.log('Error!', err);
+          } else {
+            console.log(stdout);
+          }
+      });
     }
   };
 }
