@@ -3,27 +3,94 @@
 2 info using npm@2.1.7
 3 info using node@v0.10.33
 4 verbose publish [ '.' ]
-5 verbose stack Error: Failed to parse json
-5 verbose stack Unexpected string
-5 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:378:25)
-5 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:85:51)
-5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:59:33
-5 verbose stack     at evalmachine.<anonymous>:271:14
-5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
-5 verbose stack     at Object.oncomplete (evalmachine.<anonymous>:107:15)
-6 verbose cwd /Users/Tess/Code/HackReactor/Projects/karma-easter-eggs
-7 error Darwin 13.1.0
-8 error argv "node" "/usr/local/bin/npm" "publish"
-9 error node v0.10.33
-10 error npm  v2.1.7
-11 error file /Users/Tess/Code/HackReactor/Projects/karma-easter-eggs/package.json
-12 error code EJSONPARSE
-13 error Failed to parse json
-13 error Unexpected string
-14 error File: /Users/Tess/Code/HackReactor/Projects/karma-easter-eggs/package.json
-15 error Failed to parse package.json data.
-15 error package.json must be actual JSON, not just JavaScript.
-15 error
-15 error This is not a bug in npm.
-15 error Tell the package author to fix their package.json file. JSON.parse
-16 verbose exit [ 1, true ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Tess/Code/HackReactor/Projects/karma-easter-eggs',
+7 silly cache add   type: 'directory' }
+8 verbose tar pack [ '/Users/Tess/.npm/karma-easter-eggs/1.0.0/package.tgz',
+8 verbose tar pack   '/Users/Tess/Code/HackReactor/Projects/karma-easter-eggs' ]
+9 verbose tarball /Users/Tess/.npm/karma-easter-eggs/1.0.0/package.tgz
+10 verbose folder /Users/Tess/Code/HackReactor/Projects/karma-easter-eggs
+11 info prepublish karma-easter-eggs@1.0.0
+12 verbose addLocalTarball adding from inside cache /Users/Tess/.npm/karma-easter-eggs/1.0.0/package.tgz
+13 silly cache afterAdd karma-easter-eggs@1.0.0
+14 verbose afterAdd /Users/Tess/.npm/karma-easter-eggs/1.0.0/package/package.json not in flight; writing
+15 verbose afterAdd /Users/Tess/.npm/karma-easter-eggs/1.0.0/package/package.json written
+16 silly publish { name: 'karma-easter-eggs',
+16 silly publish   version: '1.0.0',
+16 silly publish   description: 'A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.',
+16 silly publish   main: 'eggs.js',
+16 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+16 silly publish   repository:
+16 silly publish    { type: 'git',
+16 silly publish      url: 'https://github.com/TessMyers/karma-easter-eggs.git' },
+16 silly publish   keywords: [ 'easter', 'eggs', 'TDD', 'testing' ],
+16 silly publish   author: { name: 'Tess Myers' },
+16 silly publish   bin: { testRun: './testRun.js' },
+16 silly publish   license: 'ISC',
+16 silly publish   bugs: { url: 'https://github.com/TessMyers/karma-easter-eggs/issues' },
+16 silly publish   homepage: 'https://github.com/TessMyers/karma-easter-eggs',
+16 silly publish   readme: '# karma-easter-eggs\n',
+16 silly publish   readmeFilename: 'README.md',
+16 silly publish   gitHead: 'a01bb579b7d0c3f53e4ebe8d7509c6935a8ca2c2',
+16 silly publish   _id: 'karma-easter-eggs@1.0.0',
+16 silly publish   _shasum: '64a580166b3eb41d6dad1ad12a869bf6a6916cbd',
+16 silly publish   _from: '.' }
+17 silly mapToRegistry name karma-easter-eggs
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/karma-easter-eggs
+21 verbose publish registryBase https://registry.npmjs.org/
+22 silly publish uploading /Users/Tess/.npm/karma-easter-eggs/1.0.0/package.tgz
+23 verbose request uri https://registry.npmjs.org/karma-easter-eggs
+24 verbose request sending authorization for write operation
+25 info attempt registry request try #1 at 14:45:46
+26 verbose request id 94e53bd67cfec31f
+27 http request PUT https://registry.npmjs.org/karma-easter-eggs
+28 http 403 https://registry.npmjs.org/karma-easter-eggs
+29 verbose headers { date: 'Tue, 13 Jan 2015 22:45:45 GMT',
+29 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=60',
+29 verbose headers   'content-length': '2491',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1421189145.767345,VS0,VE41',
+29 verbose headers   'keep-alive': 'timeout=10, max=50',
+29 verbose headers   connection: 'Keep-Alive' }
+30 verbose request invalidating /Users/Tess/.npm/registry.npmjs.org/karma-easter-eggs on PUT
+31 error publish Failed PUT 403
+32 verbose stack Error: forbidden cannot modify pre-existing version: 1.0.0
+32 verbose stack old={"name":"karma-easter-eggs","version":"1.0.0","description":"A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.","main":"eggs.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/TessMyers/karma-easter-eggs.git"},"keywords":["easter","eggs","TDD","testing"],"author":{"name":"Tess Myers"},"bin":{"testRun":"./testRun"},"license":"ISC","bugs":{"url":"https://github.com/TessMyers/karma-easter-eggs/issues"},"homepage":"https://github.com/TessMyers/karma-easter-eggs","gitHead":"2feb137f2e94776c1131291271da3e87ae6c9c87","_id":"karma-easter-eggs@1.0.0","_shasum":"b06044cc0b139d5e482025c73e025bcb50ad4e3d","_from":".","_npmVersion":"2.1.7","_nodeVersion":"0.10.33","_npmUser":{"name":"tmyers","email":"tcymyers@gmail.com"},"maintainers":[{"name":"tmyers","email":"tcymyers@gmail.com"}],"dist":{"shasum":"b06044cc0b139d5e482025c73e025bcb50ad4e3d","tarball":"http://registry.npmjs.org/karma-easter-eggs/-/karma-easter-eggs-1.0.0.tgz"}}
+32 verbose stack new={"name":"karma-easter-eggs","version":"1.0.0","description":"A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.","main":"eggs.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/TessMyers/karma-easter-eggs.git"},"keywords":["easter","eggs","TDD","testing"],"author":{"name":"Tess Myers"},"bin":{"testRun":"./testRun.js"},"license":"ISC","bugs":{"url":"https://github.com/TessMyers/karma-easter-eggs/issues"},"homepage":"https://github.com/TessMyers/karma-easter-eggs","readme":"# karma-easter-eggs\u000a","readmeFilename":"README.md","gitHead":"a01bb579b7d0c3f53e4ebe8d7509c6935a8ca2c2","_id":"karma-easter-eggs@1.0.0","_shasum":"64a580166b3eb41d6dad1ad12a869bf6a6916cbd","_from":".","_npmVersion":"2.1.7","_nodeVersion":"0.10.33","_npmUser":{"name":"tmyers","email":"tcymyers@gmail.com"},"maintainers":[{"name":"tmyers","email":"tcymyers@gmail.com"}],"dist":{"shasum":"64a580166b3eb41d6dad1ad12a869bf6a6916cbd","tarball":"http://registry.npmjs.org/karma-easter-eggs/-/karma-easter-eggs-1.0.0.tgz"}}: karma-easter-eggs
+32 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:234:14)
+32 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+32 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:372:22)
+32 verbose stack     at Request.emit (events.js:98:17)
+32 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1310:14)
+32 verbose stack     at Request.emit (events.js:117:20)
+32 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1258:12)
+32 verbose stack     at IncomingMessage.emit (events.js:117:20)
+32 verbose stack     at _stream_readable.js:943:16
+32 verbose stack     at process._tickCallback (node.js:419:13)
+33 verbose statusCode 403
+34 verbose pkgid karma-easter-eggs
+35 verbose cwd /Users/Tess/Code/HackReactor/Projects/karma-easter-eggs
+36 error Darwin 13.1.0
+37 error argv "node" "/usr/local/bin/npm" "publish"
+38 error node v0.10.33
+39 error npm  v2.1.7
+40 error code E403
+41 error forbidden cannot modify pre-existing version: 1.0.0
+41 error old={"name":"karma-easter-eggs","version":"1.0.0","description":"A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.","main":"eggs.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/TessMyers/karma-easter-eggs.git"},"keywords":["easter","eggs","TDD","testing"],"author":{"name":"Tess Myers"},"bin":{"testRun":"./testRun"},"license":"ISC","bugs":{"url":"https://github.com/TessMyers/karma-easter-eggs/issues"},"homepage":"https://github.com/TessMyers/karma-easter-eggs","gitHead":"2feb137f2e94776c1131291271da3e87ae6c9c87","_id":"karma-easter-eggs@1.0.0","_shasum":"b06044cc0b139d5e482025c73e025bcb50ad4e3d","_from":".","_npmVersion":"2.1.7","_nodeVersion":"0.10.33","_npmUser":{"name":"tmyers","email":"tcymyers@gmail.com"},"maintainers":[{"name":"tmyers","email":"tcymyers@gmail.com"}],"dist":{"shasum":"b06044cc0b139d5e482025c73e025bcb50ad4e3d","tarball":"http://registry.npmjs.org/karma-easter-eggs/-/karma-easter-eggs-1.0.0.tgz"}}
+41 error new={"name":"karma-easter-eggs","version":"1.0.0","description":"A karma reporter for fun easter eggs. Currently a rough copy of karma-unicorn-reporter.","main":"eggs.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"https://github.com/TessMyers/karma-easter-eggs.git"},"keywords":["easter","eggs","TDD","testing"],"author":{"name":"Tess Myers"},"bin":{"testRun":"./testRun.js"},"license":"ISC","bugs":{"url":"https://github.com/TessMyers/karma-easter-eggs/issues"},"homepage":"https://github.com/TessMyers/karma-easter-eggs","readme":"# karma-easter-eggs\u000a","readmeFilename":"README.md","gitHead":"a01bb579b7d0c3f53e4ebe8d7509c6935a8ca2c2","_id":"karma-easter-eggs@1.0.0","_shasum":"64a580166b3eb41d6dad1ad12a869bf6a6916cbd","_from":".","_npmVersion":"2.1.7","_nodeVersion":"0.10.33","_npmUser":{"name":"tmyers","email":"tcymyers@gmail.com"},"maintainers":[{"name":"tmyers","email":"tcymyers@gmail.com"}],"dist":{"shasum":"64a580166b3eb41d6dad1ad12a869bf6a6916cbd","tarball":"http://registry.npmjs.org/karma-easter-eggs/-/karma-easter-eggs-1.0.0.tgz"}}: karma-easter-eggs
+42 error If you need help, you may report this error at:
+42 error     <http://github.com/npm/npm/issues>
+43 verbose exit [ 1, true ]
