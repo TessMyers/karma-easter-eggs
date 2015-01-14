@@ -1,19 +1,28 @@
 var easterEggReporter = function(baseReporterDecorator) {
   baseReporterDecorator(this);
 
-  this.onBrowserComplete = function(browser) {
-    var results = browser.lastResult;
+  var results;
 
-    if(results.success) {
+  // this is deeply flawed at the moment, won't actually tally total for multiple browsers. Works great for one though!
+
+  this.onBrowserComplete = function(browser) {
+    results = browser.lastResult;
+    console.log(results);
+  };
+
+  this.onExit = function(done) {
+
+    if(results.success === results.total) {
       require('child_process').exec("./node_modules/.bin/runFile", function(err, stdout){
-          if (err) {
-            console.log('Error!', err);
-          } else {
-            console.log(stdout);
-          }
+        if (err) {
+          console.log('Error!', err);
+        } else {
+          console.log(stdout);
+        }
       });
     }
-  };
+    done();
+  }
 }
 
 easterEggReporter.$inject = ['baseReporterDecorator', 'formatError']

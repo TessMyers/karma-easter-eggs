@@ -1,3 +1,3 @@
 ## karma-easter-eggs
 #usage
-`npm install -g karma-easter-eggs --save-dev`
+`npm install karma-easter-eggs --save-dev`
