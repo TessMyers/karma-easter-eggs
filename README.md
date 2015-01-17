@@ -7,18 +7,20 @@ This is a skeleton of a karma reporter intended to deliver an easter egg when al
 
 #Configuration
 
-```// karma.conf.js
+```javascript
+// karma.conf.js
 module.exports = function(config) {
   config.set({
     reporters: ['progress', 'eggs'],
   });
-};```
+};
+```
 
 #DIY
 
 Fork and clone this repo on Github
 
-Edit fileToRun.sh with whatever bash commands you so desire, or just replace the executable file listed on ln 16 of eggs.js with whatever you like. 
+Edit fileToRun.sh with whatever bash commands you so desire, or just replace the executable file listed on ln 16 of eggs.js with whatever you like.
 
 Happy easter egging!
 
