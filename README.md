@@ -2,11 +2,11 @@
 ## About
 This is a skeleton of a karma reporter intended to deliver an easter egg when all tests pass. Currently it's hooked up to a bash file that opens Reddit in a new Chrome tab, but you can put whatever you want in place of that. The structure for this reporter was unashamedly copied from the [karma-unicorn-reporter](https://www.npmjs.com/package/karma-unicorn-reporter).
 
-##Usage
+## Usage
 
 `npm install karma-easter-eggs --save-dev`
 
-##Configuration
+## Configuration
 
 ```javascript
 // karma.conf.js
@@ -17,7 +17,7 @@ module.exports = function(config) {
 };
 ```
 
-##DIY
+## DIY
 
 Fork and clone this repo on Github
 
