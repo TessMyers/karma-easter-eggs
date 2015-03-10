@@ -1,6 +1,6 @@
 {
   "name": "karma-easter-eggs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A karma reporter for fun easter eggs. Currently is a rough copy of karma-unicorn-reporter, but opens a chrome tab for Reddit",
   "main": "eggs.js",
   "scripts": {
